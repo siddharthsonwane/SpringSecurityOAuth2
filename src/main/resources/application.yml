@@ -1,0 +1,32 @@
+server:
+  port: 9200
+
+spring:
+  application:
+    name: SpringSecurityOAuth2
+    profiles:
+      active: dev
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521:orcl
+    username: sys as sysdba
+    password: Oracle18
+    driverClassName: oracle.jdbc.driver.OracleDriver
+    #schema : OT
+  jpa:
+    #database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop #none  #create-drop #update
+      dialect: org.hibernate.dialect.Oracle10gDialect
+        #default_schema: OT
+        #hikari:
+      #schema: OT
+
+    #cache:
+    #ehcache:
+    #config: classpath:ehcache.xml
+
+
+logging:
+  level:
+    com.infohub: DEBUG
